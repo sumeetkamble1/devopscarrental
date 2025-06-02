@@ -53,4 +53,4 @@ pipeline {
             echo '❌ CI pipeline failed.'
         }
     }
-} how to run this code on jenkins 
+} 
