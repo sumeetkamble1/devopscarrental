@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install Backend Dependencies') {
             steps {
-                dir('car-rental-backend') {
+                dir('carentalmangement/car-rental-backend') {
                     sh 'npm install'
                 }
             }
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Backend Tests') {
             steps {
-                dir('car-rental-backend') {
+                dir('carentalmangement/car-rental-backend') {
                     sh 'npm test || echo "No backend tests defined"'
                 }
             }
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Install Frontend Dependencies') {
             steps {
-                dir('car-rental-frontend') {
+                dir('carentalmangement/car-rental-frontend') {
                     sh 'npm install'
                 }
             }
@@ -38,7 +38,7 @@ pipeline {
 
         stage('Build Frontend') {
             steps {
-                dir('car-rental-frontend') {
+                dir('carentalmangement/car-rental-frontend') {
                     sh 'npm run build'
                 }
             }
